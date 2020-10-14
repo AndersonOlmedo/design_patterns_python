@@ -3,7 +3,11 @@ from desconto import Desconto_por_cinco_itens, Desconto_por_mais_de_quinhentos_r
 class Calculador_de_desconto(object):
     
     def calcula(self, orcamento):
-        return Desconto_por_cinco_itens( Desconto_por_mais_de_quinhentos_reais( Sem_desconto() ) ).calcula(orcamento)
+        return Desconto_por_cinco_itens(
+                    Desconto_por_mais_de_quinhentos_reais(
+                        Sem_desconto()
+                    )
+                ).calcula(orcamento)
 
 if __name__ == '__main__':
 
